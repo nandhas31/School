@@ -1,9 +1,28 @@
 package school;
-
+import java.io.*;
 public class Sorts {
 
 	public static void main(String[] args) {
-		int[] arr = {2,5,7,2,5,3,8};
+		int index = 0;
+		int[] arr = new int[10000];
+		BufferedReader reader;
+		try {
+			reader = new BufferedReader(new FileReader(
+					"/Users/SSNMFlex/Downloads/random10k.csv"));
+			String line = reader.readLine();
+			while (line != null) {
+				//System.out.println(line);
+				arr[index] = Integer.parseInt(line);
+				index++;
+				// read next line
+				line = reader.readLine();
+			}
+			reader.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		System.out.println();
+		System.out.println(arr[9999]);
 		arr = insertionSort(arr);
 		System.out.println("done");
 		for (int i = 0; i < arr.length; i++)
@@ -39,12 +58,18 @@ public class Sorts {
 					numbers[j] = temp;
 					index--;
 				}
+				else {
+					break;
+				}
 			}
 			
 		}
 		
 		
 		return numbers; 
+	}
+	public static int[] mergeSort(int[] numbers) {
+			return numbers;
 	}
 
 }
