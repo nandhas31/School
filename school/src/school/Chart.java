@@ -1,5 +1,4 @@
 package school;
-import java.util.*;
 public class Chart
 {
    public static void main(String[] args){
