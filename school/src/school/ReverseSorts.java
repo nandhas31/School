@@ -9,10 +9,7 @@ package school;
 			System.out.print(nums[i] + " ");
 			
 			}
-		   //-----------------------------------------------------------------
-		   //  Sorts the specified array of integers using the selection
-		   //  sort algorithm.
-		   //-----------------------------------------------------------------
+		 
 		   public static void selectionSort (int[] numbers) {
 		      int max, temp;
 
@@ -29,10 +26,7 @@ package school;
 		      }
 		   }
 
-		   //-----------------------------------------------------------------
-		   //  Sorts the specified array of integers using the insertion
-		   //  sort algorithm.
-		   //-----------------------------------------------------------------
+		  
 		   public static void insertionSort (int[] numbers) {
 		      for (int index = 1; index < numbers.length; index++) {
 		         int key = numbers[index];
